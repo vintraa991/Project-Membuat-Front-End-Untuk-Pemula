@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="stylebuku.css" />
+  </head>
+  <body>
+    <h1>Rak Buku Kita</h1>
+
+    <!-- Form Tambah Buku -->
+    <form id="bookForm" data-testid="bookForm">
+      <h2>Buku Baru</h2>
+      <input
+        id="inputjudulbuku"
+        data-testid="bookFormTitleInput"
+        type="text"
+        placeholder="Judul Buku"
+        required
+      />
+      <input
+        id="inputpenulisbuku"
+        data-testid="bookFormAuthorInput"
+        type="text"
+        placeholder="Penulis Buku"
+        required
+      />
+      <input
+        id="inputtahunterbit"
+        data-testid="bookFormYearInput"
+        type="number"
+        placeholder="Tahun Terbit"
+        required
+      />
+      <label>
+        <input
+          id="inputselesai"
+          data-testid="bookFormIsCompleteCheckbox"
+          type="checkbox"
+        />
+        Selesai dibaca
+      </label>
+      <button
+        type="submit"
+        data-testid="bookFormSubmitButton"
+      >
+        Tambah Buku
+      </button>
+    </form>
+
+    <!-- Form Pencarian Buku -->
+    <section id="searchBook" data-testid="searchBookForm">
+      <h2>Cari Buku</h2>
+      <input
+        id="searchjudulbuku"
+        data-testid="searchBookFormTitleInput"
+        type="text"
+        placeholder="Masukkan judul buku"
+      />
+      <button
+        id="searchSubmit"
+        type="button"
+        data-testid="searchBookFormSubmitButton"
+      >
+        Cari Buku
+      </button>
+    </section>
+
+    <!-- Rak Buku -->
+    <section class="bookshelf">
+      <h2>Belum Dibaca</h2>
+      <div
+        id="incompleteBookshelfList"
+        data-testid="incompleteBookList"
+      ></div>
+    </section>
+
+    <section class="bookshelf">
+      <h2>Selesai Dibaca</h2>
+      <div
+        id="completeBookshelfList"
+        data-testid="completeBookList"
+      ></div>
+    </section>
+
+    <script src="scriptbuku.js"></script>
+  </body>
+</html>
